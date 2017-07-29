@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <data>
+        <import type="com.sxqsachin.pers.ldlimbs.databinding.ui.MainActivityData"/>
+        <variable name="data" type="MainActivityData"/>
+    </data>
+    <RelativeLayout
+        android:id="@+id/rl_main"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tb_main"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+
+            android:background="@{data.toolbarBackgroundColor}"
+
+            app:title="@{data.toolbarTitle}"
+            app:titleTextColor="@{data.toolbarTitleColor}">
+
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.v7.widget.AppCompatSeekBar
+            android:id="@+id/sb_precision"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/tb_main"
+            android:layout_marginTop="24dp"
+
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+
+            android:max="100"
+            />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/et_cmd"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="188dp"
+
+            android:hint="cmd"
+
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="128dp"
+            />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_confirm_cmd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="cmd"
+
+            android:layout_alignTop="@id/et_cmd"
+            android:layout_alignBottom="@id/et_cmd"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/et_host"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="128dp"
+
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="128dp"
+            />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:layout_alignTop="@id/et_host"
+            android:layout_alignBottom="@id/et_host"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_lbd"
+            android:layout_width="128dp"
+            android:layout_height="56dp"
+
+            android:layout_below="@+id/sb_precision"
+            android:layout_alignEnd="@+id/et_host"
+            android:layout_marginTop="32dp" />
+
+    </RelativeLayout>
+
+</layout>
